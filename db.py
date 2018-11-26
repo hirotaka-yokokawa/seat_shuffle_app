@@ -2,21 +2,14 @@ import random
 
 
 def main():
-    f = open("members.txt", mode="r")  # データの読み込みをする
+    with open("members.txt", "r") as f:
+        members_text = f.read()
+        members_lists = members_text.split("\n")  # 縦に名前が表示されるので改行した｡
 
-    text = f.read()
+    for members_list in members_lists:
+        members_shuffle = random.choices(members_list)
 
-    lines = text.split("\n")  # 縦に名前が表示されるので改行した｡
-
-    for line in lines:
-        print(line)
-
-
-
-
-
-
-        f.close()
+        print(members_shuffle)
 
 
 if __name__ == "__main__":
