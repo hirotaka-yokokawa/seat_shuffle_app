@@ -1,18 +1,22 @@
+import random
+
+
 def main():
-    f = open("members.txt", mode="r") #データの読み込みをする
+    f = open("members.txt", mode="r")  # データの読み込みをする
 
     text = f.read()
 
-    lines = text.split("\n")
+    lines = text.split("\n")  # 縦に名前が表示されるので改行した｡
 
-    # for line in lines:
-    member = lines
-
-    info = f"{member[0]}{member[1]}"
-
-    print(info)
+    for line in lines:
+        print(line)
 
 
+
+
+
+
+        f.close()
 
 
 if __name__ == "__main__":
